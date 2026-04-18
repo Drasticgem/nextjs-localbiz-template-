@@ -1,22 +1,39 @@
 /**
- * Business info for Scott Electric Group.
- * Single source of truth — update here to update site-wide.
+ * Client-agnostic business constants.
+ * Replace these values when creating a new client site.
  */
 export const BUSINESS = {
-  name: "Scott Electric Group",
-  shortName: "Scott Electric",
-  founder: "Chubb Scott",
-  founded: 1920,
-  phone: "+13618846326",
-  phoneDisplay: "361-884-6326",
-  phoneHref: "tel:+13618846326",
-  // TODO: replace with the live customer payment portal URL
-  paymentUrl: "#payment",
+  // Core placeholders for template customization
+  name: "COMPANY_NAME",
+  shortName: "COMPANY_SHORT_NAME",
+  founder: "FOUNDER_NAME",
+  founded: 2000,
+  phone: "+15551234567",
+  phoneDisplay: "(555) 123-4567",
+  phoneHref: "tel:+15551234567",
+  email: "info@company.com",
+  paymentUrl: "#",
+  bookingUrl: "https://cal.com/company",
+  primaryColor: "oklch(62% 0.18 258)",
+  address: {
+    street: "123 Main Street",
+    city: "CITY_NAME",
+    state: "ST",
+    zip: "00000",
+    full: "123 Main Street, CITY_NAME, ST 00000",
+  },
+  hours: {
+    weekdays: "8:00 AM - 6:00 PM",
+    saturday: "9:00 AM - 2:00 PM",
+    sunday: "Closed",
+  },
+  socials: {
+    facebook: "https://facebook.com/company",
+    instagram: "https://instagram.com/company",
+    google: "https://g.page/company",
+  },
   locations: [
-    { name: "Corpus Christi", isHQ: true },
-    { name: "San Antonio", isHQ: false },
-    { name: "Alice", isHQ: false },
-    { name: "Weslaco", isHQ: false },
+    { name: "Primary Location", isHQ: true },
+    { name: "Secondary Location", isHQ: false },
   ],
-  // TODO: email / street address / hours not present in source HTML
 } as const;
