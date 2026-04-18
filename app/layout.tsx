@@ -1,45 +1,41 @@
 import type { Metadata, Viewport } from "next";
+import { Lora, Sora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ChatWidget } from "@/components/chat/ChatWidget";
 import { BUSINESS } from "@/lib/constants";
 import "./globals.css";
+
+const headingFont = Lora({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
+const bodyFont = Sora({
+  subsets: ["latin"],
+  variable: "--font-body",
+});
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: BUSINESS.name,
-  founder: BUSINESS.founder,
-  foundingDate: String(BUSINESS.founded),
   telephone: BUSINESS.phone,
-  description:
-    "Electrical, A/C, Telecom & Custom Woodworking for South Texas since 1920. Industrial, commercial, and residential.",
-  address: BUSINESS.locations.map((loc) => ({
+  email: BUSINESS.email,
+  address: {
     "@type": "PostalAddress",
-    addressLocality: loc.name,
-    addressRegion: "TX",
+    streetAddress: BUSINESS.address.street,
+    addressLocality: BUSINESS.address.city,
+    addressRegion: BUSINESS.address.state,
+    postalCode: BUSINESS.address.zip,
     addressCountry: "US",
-  })),
-  areaServed: "South Texas",
+  },
 };
 
 export const metadata: Metadata = {
-  title: "Scott Electric Group — Powering South Texas Since 1920",
+  title: `Home | ${BUSINESS.name} — ${BUSINESS.address.city}, ${BUSINESS.address.state}`,
   description:
-    "Scott Electric Group — Electrical, A/C, Telecom & Custom Woodworking for South Texas since 1920. Industrial, commercial, and residential services from Corpus Christi to San Antonio.",
-  openGraph: {
-    title: "Scott Electric Group — Powering South Texas Since 1920",
-    description:
-      "Electrical, A/C, Telecom & Custom Woodworking. Four divisions, one standard. Serving South Texas for over a century.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Scott Electric Group — Powering South Texas Since 1920",
-    description:
-      "Electrical, A/C, Telecom & Custom Woodworking. Four divisions, one standard.",
-  },
+    "Client-agnostic Next.js starter template for local businesses. Replace branding, services, and contact details for each new client project.",
 };
 
 export const viewport: Viewport = {
@@ -49,53 +45,20 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <head>
-        {/*
-          Strip any #hash from the URL before hydration so reloading on
-          a deep-linked section (e.g. #services) doesn't trigger the
-          browser's native anchor auto-scroll. We always want full page
-          loads of "/" to land on the hero. In-page link clicks still
-          work — this only runs once on initial document parse.
-        */}
-        <script
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: `try{if(window.location.hash){history.replaceState(null,"",window.location.pathname+window.location.search);}}catch(e){}`,
-          }}
-        />
-        {/*
-          Google Fonts loaded at runtime via <link> — the build environment
-          cannot reach fonts.googleapis.com for next/font/google's build-time
-          fetch, and the legacy static site already used this pattern.
-        */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
+      <body className={`${headingFont.variable} ${bodyFont.variable}`}>
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessJsonLd),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
-      </head>
-      <body>
         <Header />
         <main>{children}</main>
         <Footer />
-        <ChatWidget />
         <Analytics />
       </body>
     </html>

@@ -281,3 +281,14 @@ Adding a new service page = adding a new object to this array. No new files, no 
 ## Lessons Learned
 
 <!-- Add mistakes Claude makes here so they don't repeat. Format: what went wrong → what to do instead. -->
+
+## How to Create a New Client Site from This Template
+
+1. Fork this repo (never customize this starter directly for a live client).
+2. Rename project/package details for the client.
+3. Update `lib/constants.ts` placeholders (`COMPANY_NAME`, phone, address, socials, hours).
+4. Replace `lib/data/` sample arrays with client-specific content.
+5. Update fonts and brand color variables in `app/layout.tsx` and `app/globals.css`.
+6. Replace images in `public/images/` with optimized client assets.
+7. Run quality checks (`pnpm lint`, `pnpm typecheck`, `pnpm build`).
+8. Deploy the fork to Vercel and connect the client domain.
