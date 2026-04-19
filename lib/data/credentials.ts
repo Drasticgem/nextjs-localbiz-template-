@@ -4,7 +4,7 @@
  */
 export interface Credential {
   value: string;
-  /** Display the value slightly smaller (used for multi-line "OSHA Star"). */
+  /** Display the value slightly smaller for multi-line values. */
   smallValue?: boolean;
   title: string;
   sub: string;
@@ -20,16 +20,16 @@ export const CREDENTIALS: Credential[] = [
     shortLabel: "EMR .46",
   },
   {
-    value: "OSHA\nStar",
+    value: "Top\nRated",
     smallValue: true,
-    title: "VPP Certified Worksite",
-    sub: "Valero Corpus Christi & Three Rivers",
-    shortLabel: "OSHA VPP Star",
+    title: "Safety Program Certified",
+    sub: "Placeholder certification details",
+    shortLabel: "Safety Certified",
   },
   {
     value: "4",
-    title: "Corpus Christi, SA, Alice, Weslaco",
-    sub: "Serving all of South Texas",
+    title: "Multiple Service Areas",
+    sub: "Placeholder service area coverage",
     shortLabel: "4 Regional Offices",
   },
 ];

@@ -35,7 +35,7 @@ const localBusinessJsonLd = {
 export const metadata: Metadata = {
   title: `Home | ${BUSINESS.name} — ${BUSINESS.address.city}, ${BUSINESS.address.state}`,
   description:
-    "Client-agnostic Next.js starter template for local businesses. Replace branding, services, and contact details for each new client project.",
+    "Reusable Next.js starter template for local businesses. Replace branding, services, and contact details for each new client project.",
 };
 
 export const viewport: Viewport = {

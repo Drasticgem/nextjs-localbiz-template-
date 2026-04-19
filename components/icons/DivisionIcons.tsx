@@ -9,7 +9,7 @@ type IconProps = {
   className?: string;
 };
 
-/** Lightning bolt — Scott Electric. Gold fill on navy, navy fill on gold. */
+/** Lightning bolt — Premier Trades. Gold fill on navy, navy fill on gold. */
 export function BoltIcon({
   size = 18,
   fill = "#0F2040",
@@ -32,7 +32,7 @@ export function BoltIcon({
   );
 }
 
-/** Hybrid snowflake-flame — Scott A/C & Heating.
+/** Hybrid snowflake-flame — Climate & Comfort.
     Strokes take a color arg so the services card can use blue strokes
     instead of the navy strokes shown inside the hero card. */
 export function SnowflakeFlameIcon({
@@ -88,7 +88,7 @@ export function SnowflakeFlameIcon({
   );
 }
 
-/** Phone receiver + console — Scott Telecom. */
+/** Phone receiver + console — Smart Systems. */
 export function TelecomIcon({
   size = 18,
   stroke = "#0F2040",

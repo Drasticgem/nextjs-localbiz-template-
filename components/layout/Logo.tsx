@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Scott Electric Group bolt logo + wordmark.
+ * Template Contractor Group bolt logo + wordmark.
  * Reused by Header (size="md") and Footer (size="sm").
  * The bolt SVG path is lifted verbatim from the legacy index.html.
  */

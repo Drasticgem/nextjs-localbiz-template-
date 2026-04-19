@@ -1,5 +1,5 @@
 /**
- * Four divisions of Scott Electric Group.
+ * Four divisions of Template Contractor Group.
  * Used by both the Divisions section (dark navy cards right below hero)
  * and the Services grid (light cards). Single source of truth.
  */
@@ -25,7 +25,7 @@ export interface Division {
 export const DIVISIONS: Division[] = [
   {
     slug: "electric",
-    name: "Scott Electric",
+    name: "Premier Trades",
     tagline: "Industrial, commercial & residential",
     description:
       "Industrial, commercial, and residential electrical — from DCS and solar to knob-and-tube replacement. Licensed, bonded, insured.",
@@ -36,7 +36,7 @@ export const DIVISIONS: Division[] = [
   },
   {
     slug: "ac-heating",
-    name: "Scott A/C & Heating",
+    name: "Climate & Comfort",
     tagline: "Installation, service & fabrication",
     description:
       "Full-service HVAC — installation, maintenance, repair, and custom fabrication for all major brands. Residential and commercial.",
@@ -47,7 +47,7 @@ export const DIVISIONS: Division[] = [
   },
   {
     slug: "telecom",
-    name: "Scott Telecom",
+    name: "Smart Systems",
     tagline: "Fiber, phone & security systems",
     description:
       "Fiber optic, structured cabling, phone systems, security & surveillance. Wired and wireless solutions for any facility.",
@@ -57,13 +57,13 @@ export const DIVISIONS: Division[] = [
     heroImage: "/images/services/telecom.jpg",
   },
   {
-    slug: "coastal-kitchens",
+    slug: "custom-cabinetry",
     name: "Coastal Kitchens",
     tagline: "Custom woodwork & cabinetry",
     description:
       "Highest quality custom woodwork for homes and businesses. Remodels, new construction, furniture, and full kitchen builds.",
     badge: "Custom builds",
-    exploreLabel: "Explore kitchens",
+    exploreLabel: "Explore cabinetry",
     accent: "ck-terra",
     heroImage: "/images/services/coastal-kitchens.jpg",
   },

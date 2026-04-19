@@ -1,5 +1,5 @@
 /**
- * Client-agnostic business constants.
+ * Reusable business constants.
  * Replace these values when creating a new client site.
  */
 export const BUSINESS = {
@@ -9,18 +9,18 @@ export const BUSINESS = {
   founder: "FOUNDER_NAME",
   founded: 2000,
   phone: "+15551234567",
-  phoneDisplay: "(555) 123-4567",
+  phoneDisplay: "(555) 010-1234",
   phoneHref: "tel:+15551234567",
-  email: "info@company.com",
+  email: "hello@examplecontractor.com",
   paymentUrl: "#",
-  bookingUrl: "https://cal.com/company",
+  bookingUrl: "https://cal.com/example-contractor",
   primaryColor: "oklch(62% 0.18 258)",
   address: {
-    street: "123 Main Street",
+    street: "123 Main St",
     city: "CITY_NAME",
     state: "ST",
     zip: "00000",
-    full: "123 Main Street, CITY_NAME, ST 00000",
+    full: "123 Main St, CITY_NAME, ST 00000",
   },
   hours: {
     weekdays: "8:00 AM - 6:00 PM",

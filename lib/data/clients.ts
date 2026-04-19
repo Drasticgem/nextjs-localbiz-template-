@@ -1,8 +1,8 @@
 export const CLIENTS: string[] = [
-  "Valero Energy",
-  "Sunoco",
-  "H-E-B",
-  "Corpus Christi ISD",
-  "Port of CC",
-  "Flint Hills Resources",
+  "Regional General Contractor",
+  "Property Management Group",
+  "Local School District",
+  "Healthcare Clinic Network",
+  "Manufacturing Facility",
+  "Small Business Portfolio",
 ];

@@ -13,7 +13,7 @@ export const services: Service[] = [
     title: "Electrician Services",
     description: "Licensed electrical installs, troubleshooting, and upgrades.",
     longDescription:
-      "Template content: describe your client's electrical specialties, response times, and service areas here.",
+      "Placeholder copy: describe your client's electrical specialties, response times, and service areas here.",
     features: ["24/7 emergency options", "Licensed technicians", "Upfront pricing"],
   },
   {
@@ -21,7 +21,7 @@ export const services: Service[] = [
     title: "HVAC Services",
     description: "Heating and cooling repairs, tune-ups, and replacements.",
     longDescription:
-      "Template content: add the HVAC offerings and warranties specific to your client.",
+      "Placeholder copy: add the HVAC offerings and warranties specific to your client.",
     features: ["Seasonal maintenance", "Energy-efficient upgrades", "Fast diagnostics"],
   },
   {
@@ -29,7 +29,7 @@ export const services: Service[] = [
     title: "Plumbing Services",
     description: "Leak repair, drain cleaning, and fixture installation.",
     longDescription:
-      "Template content: customize this section with the plumbing services offered by the client.",
+      "Placeholder copy: customize this section with the plumbing services offered by the client.",
     features: ["Same-day appointments", "Clean job sites", "Residential + commercial"],
   },
 ];

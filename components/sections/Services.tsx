@@ -122,7 +122,7 @@ function ServicePanel({
 
       {/* Per-panel overlay boost — Coastal Kitchens photo is high-key, so we
           darken it a touch more to keep the white headline readable. */}
-      {division.slug === "coastal-kitchens" && (
+      {division.slug === "custom-cabinetry" && (
         <div aria-hidden="true" className="absolute inset-0 bg-navy/20" />
       )}
 

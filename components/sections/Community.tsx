@@ -29,8 +29,7 @@ export function Community() {
             of this community.
           </h2>
           <p className="mb-8 max-w-[560px] text-[15px] leading-[1.75] text-muted">
-            Since 1920, Scott Group has been deeply rooted in the Coastal Bend
-            — giving back to the organizations that make South Texas strong.
+            Use this section to highlight local involvement, sponsorships, and charitable work that build trust in your service area.
           </p>
         </Reveal>
 

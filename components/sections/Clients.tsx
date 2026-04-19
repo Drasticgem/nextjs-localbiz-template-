@@ -9,7 +9,7 @@ import { Reveal } from "@/components/animations/Reveal";
 export function Clients() {
   return (
     <section
-      aria-label="Trusted by South Texas' largest employers"
+      aria-label="Trusted by local homeowners and businesses"
       className="bg-white py-16 max-[768px]:py-12"
     >
       <Reveal>
@@ -18,7 +18,7 @@ export function Clients() {
             className="mb-6 text-center text-[10px] font-semibold uppercase text-mid-gray"
             style={{ letterSpacing: "0.18em" }}
           >
-            Trusted by South Texas&apos; largest employers
+            Trusted by local homeowners and businesses
           </p>
           <div
             className={[
