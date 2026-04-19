@@ -4,8 +4,8 @@ export interface Stat {
 }
 
 export const STATS: Stat[] = [
-  { number: "1920", label: "Year Established" },
-  { number: "10,000+", label: "Work Orders in 2024" },
-  { number: "$250K+", label: "Charitable Giving 2024" },
-  { number: "700+", label: "New Customers in 2024" },
+  { number: "2000", label: "Year Established" },
+  { number: "1,000+", label: "Projects Completed" },
+  { number: "98%", label: "Customer Satisfaction" },
+  { number: "24/7", label: "Emergency Availability" },
 ];

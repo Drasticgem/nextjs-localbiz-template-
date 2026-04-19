@@ -7,12 +7,12 @@ export interface Testimonial {
 // Replace with real client testimonials and customer names.
 export const testimonials: Testimonial[] = [
   {
-    name: "Happy Customer",
+    name: "Customer Name",
     quote: "Great communication and clean, professional work from start to finish.",
     location: "Downtown",
   },
   {
-    name: "Returning Client",
+    name: "Repeat Customer",
     quote: "The team showed up on time and explained everything clearly.",
     location: "Northside",
   },

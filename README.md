@@ -1,91 +1,51 @@
-# Local Business Website Template (Next.js)
+# Contractor Website Template (Next.js)
 
-A **client-agnostic starter** for conversion-focused local business websites.
+Reusable baseline for **contractor, trades, and local service** websites.
 
-> Do not edit this template directly for production clients — **always fork it first**.
+> This repository is intended to be used as a **GitHub Template Repository**.
+> Do not build real client work directly in this repo.
 
-## Tech Stack
+## Stack
 
-- Next.js (App Router) + TypeScript
-- Tailwind CSS v4 (CSS-first in `app/globals.css`)
+- Next.js 15 (App Router) + TypeScript
+- React 19
+- Tailwind CSS v4 beta
 - Framer Motion
-- React Hook Form + Zod + Server Actions (ready pattern)
-- shadcn/ui-compatible structure
-- Vercel-ready deployment
-- pnpm package manager
+- Lucide React
+- Vercel Analytics
+- pnpm
 
-## Quick Start (New Client Project)
+## Create a New Client Site (Template Workflow)
 
-1. **Fork this repository** into a new repo named for your client.
-2. Clone your fork and install dependencies:
-   ```bash
-   pnpm install
-   ```
-3. Copy environment variables:
-   ```bash
-   cp .env.example .env.local
-   ```
-4. Start development server:
-   ```bash
-   pnpm dev
-   ```
-5. Replace placeholders in:
-   - `lib/constants.ts` (business identity)
-   - `lib/data/*.ts` (services/testimonials/faqs/team)
-   - `app/globals.css` (brand colors + typography)
-6. Update images under `public/images/`.
-7. Deploy to Vercel when ready.
+1. In GitHub, click **Use this template** on this repository.
+2. Create a new repository named for the client project.
+3. Clone the new client repository.
+4. Install dependencies and start development:
 
-## Folder Structure
-
-```text
-app/
-  (marketing)/
-    page.tsx
-    about/page.tsx
-    services/page.tsx
-    contact/page.tsx
-  layout.tsx
-  globals.css
-components/
-  ui/
-  sections/
-  layout/
-  forms/
-  common/
-lib/
-  constants.ts
-  data/
-  schemas.ts
-  utils.ts
-public/
-  images/
-  icons/
+```bash
+pnpm install
+pnpm dev
 ```
 
-## Branding Customization Guide
+5. Replace business/content placeholders (see `docs/content-replacement-map.md`).
+6. Run quality checks before handoff/deploy:
 
-1. **Colors:** edit CSS variables in `app/globals.css` (`--color-navy`, `--color-gold`, etc.).
-2. **Fonts:** update `next/font/google` choices in `app/layout.tsx` and matching CSS vars.
-3. **Business identity:** replace all placeholders in `lib/constants.ts`.
-4. **Metadata:** update per-page metadata and structured data before production launch.
+```bash
+pnpm lint
+pnpm typecheck
+pnpm build
+```
 
-## Content Replacement Process
+## Rules for Contributors and Assistants
 
-- Replace example services in `lib/data/services.ts`.
-- Replace sample testimonials and FAQs in `lib/data/testimonials.ts` and `lib/data/faqs.ts`.
-- Replace team placeholders in `lib/data/team.ts`.
-- Ensure all placeholder text is removed from route pages under `app/(marketing)/`.
+- Never build a real client directly in this template repository.
+- Business info must come from `lib/constants.ts` (or future centralized config).
+- Do not hardcode phone numbers, addresses, emails, or company names in components.
+- Keep template placeholders until they are replaced in a generated client repo.
 
-## Deployment (Vercel)
+## Documentation
 
-1. Push your client fork to GitHub.
-2. Import the repo in Vercel.
-3. Add environment variables from `.env.local`.
-4. Trigger production deploy from `main`.
-
-## Important Workflow Rule
-
-- ✅ Fork for each client.
-- ✅ Keep this repository as a starter baseline.
-- ❌ Do **not** build client-specific code directly in this template repo.
+- New client setup: `docs/new-client-workflow.md`
+- Client intake: `docs/client-intake.md`
+- Placeholder inventory: `docs/content-replacement-map.md`
+- Launch QA: `docs/launch-checklist.md`

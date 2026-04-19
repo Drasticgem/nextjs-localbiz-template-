@@ -9,7 +9,7 @@ export const COMMUNITY: CommunityCard[] = [
     number: "$250K+",
     title: "United Way partner",
     description:
-      "3 fundraisers per year, employee payroll giving, and direct donations to the Coastal Bend.",
+      "Placeholder: describe annual fundraisers, volunteer work, and local partnerships.",
   },
   {
     number: "14+",
@@ -19,8 +19,8 @@ export const COMMUNITY: CommunityCard[] = [
   },
   {
     number: "100+",
-    title: "Years in Corpus Christi",
+    title: "Years in Business",
     description:
-      "Every street corner in the city carries our work — and our commitment to the town we love.",
+      "Placeholder: summarize long-term local impact and community trust.",
   },
 ];

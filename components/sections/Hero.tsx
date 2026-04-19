@@ -16,9 +16,9 @@ import { CREDENTIALS } from "@/lib/data/credentials";
  */
 
 const LOCATIONS = [
-  { name: "Corpus Christi", isHQ: true },
-  { name: "San Antonio" },
-  { name: "Alice · Weslaco" },
+  { name: "Primary Service Area", isHQ: true },
+  { name: "Secondary Area" },
+  { name: "Regional Coverage" },
 ] as const;
 
 export function Hero() {
@@ -92,7 +92,7 @@ export function Hero() {
           className="mb-4 text-[11px] font-semibold uppercase text-gold"
           style={{ letterSpacing: "0.22em" }}
         >
-          South Texas · Est. {BUSINESS.founded}
+          Locally Owned · Est. {BUSINESS.founded}
         </p>
 
         <h1
@@ -106,15 +106,14 @@ export function Hero() {
         >
           Over 100 years
           <br />
-          of powering <em className="not-italic text-gold">South Texas</em>
+          of serving <em className="not-italic text-gold">your local market</em>
         </h1>
 
         <p
           className="mb-8 max-w-[520px] text-[15px] leading-[1.8] text-white max-[480px]:text-[13px]"
           style={{ textShadow: "0 1px 8px rgba(0,0,0,0.55)" }}
         >
-          Electrical, A/C, Telecom, and custom woodworking — from Corpus
-          Christi to San Antonio. Industrial, commercial, and residential.
+          Electrical, HVAC, telecom, and specialty trades for residential and commercial projects. Replace this line with client-specific positioning.
         </p>
 
         {/* Dual CTAs — solid gold primary + gold-outline tel: secondary */}

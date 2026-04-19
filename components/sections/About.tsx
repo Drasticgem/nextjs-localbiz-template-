@@ -3,7 +3,7 @@ import { BUSINESS } from "@/lib/constants";
 import { Reveal } from "@/components/animations/Reveal";
 
 /**
- * About Scott Group — two-column layout on desktop (text left, vintage
+ * About our team — two-column layout on desktop (text left, vintage
  * founder photo right). On mobile the photo sits between the headline
  * and body copy.
  */
@@ -18,7 +18,7 @@ export function About() {
               className="mb-3 text-[10px] font-semibold uppercase text-gold"
               style={{ letterSpacing: "0.22em" }}
             >
-              About Scott Group
+              About our team
             </p>
             <h2
               className="mb-4 font-[family-name:var(--font-display)] font-black text-white"
@@ -27,14 +27,14 @@ export function About() {
                 lineHeight: 1.2,
               }}
             >
-              The longest-established electrical contractor in South Texas
+              A local contractor focused on dependable service
             </h2>
 
             {/* Founder photo — mobile only (between headline and body) */}
             <div className="my-6 md:hidden">
               <Image
                 src="/images/Founder.jpg"
-                alt="Original Scott Electric Company building — Engineering &amp; Construction"
+                alt="Original Premier Trades Company building — Engineering &amp; Construction"
                 width={564}
                 height={291}
                 className="rounded-lg border border-white/10"
@@ -43,10 +43,7 @@ export function About() {
 
             <p className="mb-6 text-[14px] leading-[1.8] text-white/60">
               Founded by {BUSINESS.founder} in {BUSINESS.founded}, we&apos;ve
-              spent over a century powering the Coastal Bend — from
-              knob-and-tube wiring to DCS, solar, and fiber optics. With
-              offices in Corpus Christi, San Antonio, Alice, and Weslaco, no
-              job in South Texas is out of reach.
+              built a strong reputation for quality workmanship, transparent communication, and on-time delivery. Update this section with your client's story, service area, and differentiators.
             </p>
             <a
               href="#"
@@ -61,7 +58,7 @@ export function About() {
           <div className="hidden shrink-0 md:block md:w-[420px]">
             <Image
               src="/images/Founder.jpg"
-              alt="Original Scott Electric Company building — Engineering &amp; Construction"
+              alt="Original Premier Trades Company building — Engineering &amp; Construction"
               width={564}
               height={291}
               className="rounded-lg border border-white/10 shadow-lg"
