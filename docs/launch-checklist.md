@@ -22,6 +22,17 @@ Run and verify:
 - [ ] `pnpm typecheck`
 - [ ] `pnpm build`
 
+## Email Delivery Verification (Resend + Vercel)
+
+- [ ] In Vercel Project Settings → Environment Variables, set:
+  - `RESEND_API_KEY`
+  - `CONTACT_TO_EMAIL`
+  - `CONTACT_FROM_EMAIL`
+- [ ] Redeploy after saving env vars.
+- [ ] Submit the `/contact` form on production with a real email + phone.
+- [ ] Confirm lead email arrives at `CONTACT_TO_EMAIL` with name, phone, email, service, message, and source page.
+- [ ] Confirm `Reply-To` is the visitor email so direct replies go back to the lead.
+
 ## Performance + SEO
 
 - [ ] Images optimized and sized.
