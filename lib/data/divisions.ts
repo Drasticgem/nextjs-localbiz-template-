@@ -1,6 +1,6 @@
 /**
- * Four divisions of Template Contractor Group.
- * Used by both the Divisions section (dark navy cards right below hero)
+ * Example divisions used by the demo site.
+ * Consumed by both the Divisions section (dark navy cards right below hero)
  * and the Services grid (light cards). Single source of truth.
  */
 export type DivisionAccent = "gold" | "ac-blue" | "tele-green" | "ck-terra";

@@ -7,6 +7,7 @@ This file identifies where placeholders currently live in the template.
 - `lib/constants.ts`
   - `COMPANY_NAME`
   - `COMPANY_SHORT_NAME`
+  - `COMPANY_TAGLINE`
   - `FOUNDER_NAME`
   - `CITY_NAME`
   - Placeholder phone, email, address, booking URL
