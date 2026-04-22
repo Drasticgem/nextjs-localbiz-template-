@@ -32,9 +32,7 @@ export function Logo({ size = "md", className }: LogoProps) {
         <span
           className={cn(
             "font-[family-name:var(--font-display)] font-bold text-white",
-            size === "md"
-              ? "text-[16px] max-[480px]:text-[14px]"
-              : "text-[15px]",
+            size === "md" ? "text-[16px] max-[480px]:text-[14px]" : "text-[15px]",
           )}
           style={{ letterSpacing: "0.1em" }}
         >

@@ -98,7 +98,13 @@ export function ContactForm({ sourcePage = "/contact" }: ContactFormProps) {
           />
         </Field>
 
-        <Field id="contact-email" label="Email" error={errors.email?.message} required className="md:col-span-2">
+        <Field
+          id="contact-email"
+          label="Email"
+          error={errors.email?.message}
+          required
+          className="md:col-span-2"
+        >
           <input
             id="contact-email"
             {...register("email")}
@@ -108,8 +114,17 @@ export function ContactForm({ sourcePage = "/contact" }: ContactFormProps) {
           />
         </Field>
 
-        <Field id="contact-service" label="Service" error={errors.service?.message} className="md:col-span-1">
-          <select id="contact-service" {...register("service")} className={inputClass(errors.service?.message)}>
+        <Field
+          id="contact-service"
+          label="Service"
+          error={errors.service?.message}
+          className="md:col-span-1"
+        >
+          <select
+            id="contact-service"
+            {...register("service")}
+            className={inputClass(errors.service?.message)}
+          >
             <option value="">Select a service (optional)</option>
             {contactServices.map((service) => (
               <option key={service} value={service}>
@@ -139,7 +154,13 @@ export function ContactForm({ sourcePage = "/contact" }: ContactFormProps) {
           </select>
         </Field>
 
-        <Field id="contact-message" label="Message" error={errors.message?.message} required className="md:col-span-2">
+        <Field
+          id="contact-message"
+          label="Message"
+          error={errors.message?.message}
+          required
+          className="md:col-span-2"
+        >
           <textarea
             id="contact-message"
             {...register("message")}
@@ -152,7 +173,12 @@ export function ContactForm({ sourcePage = "/contact" }: ContactFormProps) {
 
       <div className="sr-only" aria-hidden="true">
         <label htmlFor="companyWebsite">Company Website</label>
-        <input id="companyWebsite" tabIndex={-1} autoComplete="off" {...register("companyWebsite")} />
+        <input
+          id="companyWebsite"
+          tabIndex={-1}
+          autoComplete="off"
+          {...register("companyWebsite")}
+        />
       </div>
 
       <input type="hidden" {...register("sourcePage")} value={sourcePage} />

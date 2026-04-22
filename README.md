@@ -37,14 +37,14 @@ pnpm format        # prettier --write .
 
 The template is designed so every "swap point" sits in a small number of files:
 
-| What | File(s) |
-| --- | --- |
-| Business identity (name, phone, email, address, hours, socials) | `lib/constants.ts` (`BUSINESS`) |
-| Services, team, FAQs, testimonials, stats, etc. | `lib/data/*.ts` |
-| Contact form service options | `lib/schemas/contact.ts` (`contactServices`) |
-| Brand tokens (colors, fonts, radius, shadows) | `app/globals.css` (`@theme { ... }`) |
-| Site metadata + LocalBusiness JSON-LD | `app/layout.tsx` |
-| Logos, images, icons, videos | `public/` |
+| What                                                            | File(s)                                      |
+| --------------------------------------------------------------- | -------------------------------------------- |
+| Business identity (name, phone, email, address, hours, socials) | `lib/constants.ts` (`BUSINESS`)              |
+| Services, team, FAQs, testimonials, stats, etc.                 | `lib/data/*.ts`                              |
+| Contact form service options                                    | `lib/schemas/contact.ts` (`contactServices`) |
+| Brand tokens (colors, fonts, radius, shadows)                   | `app/globals.css` (`@theme { ... }`)         |
+| Site metadata + LocalBusiness JSON-LD                           | `app/layout.tsx`                             |
+| Logos, images, icons, videos                                    | `public/`                                    |
 
 **Rule:** never hardcode phone/address/email/company name in components —
 always source from `BUSINESS` so a single edit propagates everywhere.
@@ -55,13 +55,13 @@ See `docs/content-replacement-map.md` for the full inventory of placeholders.
 
 Copy `.env.example` → `.env.local` and set:
 
-| Variable | Required | Purpose |
-| --- | --- | --- |
-| `RESEND_API_KEY` | yes (for email) | Resend API key |
-| `CONTACT_TO_EMAIL` | yes (for email) | Inbox that receives leads |
-| `CONTACT_FROM_EMAIL` | yes (for email) | Verified Resend sender, e.g. `Website Leads <leads@your-domain.com>` |
-| `NEXT_PUBLIC_COMPANY_NAME` | no | Optional public display name |
-| `NEXT_PUBLIC_SITE_URL` | no | Reserve for future absolute URLs / sitemap |
+| Variable                   | Required        | Purpose                                                              |
+| -------------------------- | --------------- | -------------------------------------------------------------------- |
+| `RESEND_API_KEY`           | yes (for email) | Resend API key                                                       |
+| `CONTACT_TO_EMAIL`         | yes (for email) | Inbox that receives leads                                            |
+| `CONTACT_FROM_EMAIL`       | yes (for email) | Verified Resend sender, e.g. `Website Leads <leads@your-domain.com>` |
+| `NEXT_PUBLIC_COMPANY_NAME` | no              | Optional public display name                                         |
+| `NEXT_PUBLIC_SITE_URL`     | no              | Reserve for future absolute URLs / sitemap                           |
 
 If the Resend variables are missing, the contact/estimate forms return a
 friendly "not configured yet" message and direct visitors to the phone CTA
@@ -111,15 +111,15 @@ public/           # logos, images, icons, videos
 
 ## Scripts
 
-| Script | What it does |
-| --- | --- |
-| `pnpm dev` | Next dev server |
-| `pnpm build` | Production build |
-| `pnpm start` | Serve the production build |
-| `pnpm lint` | ESLint (flat config, Next + TS rules) |
-| `pnpm typecheck` | `tsc --noEmit` |
-| `pnpm format` | Prettier write |
-| `pnpm format:check` | Prettier check |
+| Script              | What it does                          |
+| ------------------- | ------------------------------------- |
+| `pnpm dev`          | Next dev server                       |
+| `pnpm build`        | Production build                      |
+| `pnpm start`        | Serve the production build            |
+| `pnpm lint`         | ESLint (flat config, Next + TS rules) |
+| `pnpm typecheck`    | `tsc --noEmit`                        |
+| `pnpm format`       | Prettier write                        |
+| `pnpm format:check` | Prettier check                        |
 
 ## Docs
 

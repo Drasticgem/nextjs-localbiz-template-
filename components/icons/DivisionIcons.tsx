@@ -72,18 +72,114 @@ export function SnowflakeFlameIcon({
         opacity={flameOpacity}
       />
       {/* Snowflake arms */}
-      <line x1="12" y1="0.5" x2="12" y2="4.5" stroke={stroke} strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="10.5" y1="1.8" x2="12" y2="3.2" stroke={stroke} strokeWidth="0.9" strokeLinecap="round" />
-      <line x1="13.5" y1="1.8" x2="12" y2="3.2" stroke={stroke} strokeWidth="0.9" strokeLinecap="round" />
-      <line x1="4.5" y1="8.5" x2="8" y2="10.2" stroke={stroke} strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="5" y1="7" x2="6.5" y2="8.8" stroke={stroke} strokeWidth="0.9" strokeLinecap="round" />
-      <line x1="19.5" y1="8.5" x2="16" y2="10.2" stroke={stroke} strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="19" y1="7" x2="17.5" y2="8.8" stroke={stroke} strokeWidth="0.9" strokeLinecap="round" />
-      <line x1="5.5" y1="18.5" x2="9" y2="15" stroke={stroke} strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="18.5" y1="18.5" x2="15" y2="15" stroke={stroke} strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="12" y1="15.5" x2="12" y2="23" stroke={stroke} strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="10.5" y1="21.5" x2="12" y2="20" stroke={stroke} strokeWidth="0.9" strokeLinecap="round" />
-      <line x1="13.5" y1="21.5" x2="12" y2="20" stroke={stroke} strokeWidth="0.9" strokeLinecap="round" />
+      <line
+        x1="12"
+        y1="0.5"
+        x2="12"
+        y2="4.5"
+        stroke={stroke}
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="10.5"
+        y1="1.8"
+        x2="12"
+        y2="3.2"
+        stroke={stroke}
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+      <line
+        x1="13.5"
+        y1="1.8"
+        x2="12"
+        y2="3.2"
+        stroke={stroke}
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+      <line
+        x1="4.5"
+        y1="8.5"
+        x2="8"
+        y2="10.2"
+        stroke={stroke}
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="5"
+        y1="7"
+        x2="6.5"
+        y2="8.8"
+        stroke={stroke}
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+      <line
+        x1="19.5"
+        y1="8.5"
+        x2="16"
+        y2="10.2"
+        stroke={stroke}
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="19"
+        y1="7"
+        x2="17.5"
+        y2="8.8"
+        stroke={stroke}
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+      <line
+        x1="5.5"
+        y1="18.5"
+        x2="9"
+        y2="15"
+        stroke={stroke}
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="18.5"
+        y1="18.5"
+        x2="15"
+        y2="15"
+        stroke={stroke}
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="12"
+        y1="15.5"
+        x2="12"
+        y2="23"
+        stroke={stroke}
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="10.5"
+        y1="21.5"
+        x2="12"
+        y2="20"
+        stroke={stroke}
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+      <line
+        x1="13.5"
+        y1="21.5"
+        x2="12"
+        y2="20"
+        stroke={stroke}
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -140,13 +236,7 @@ export function HouseIcon({
     different opacities (matches the second SVG in the legacy services grid). */
 export function ServicesAcIcon({ size = 22 }: IconProps) {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M12 3.5C12 3.5 9 7 9 10.2C9 12.2 10.3 13.8 12 14.2C13.7 13.8 15 12.2 15 10.2C15 7 12 3.5 12 3.5Z"
         fill="#4AA8C8"
@@ -157,18 +247,114 @@ export function ServicesAcIcon({ size = 22 }: IconProps) {
         fill="#FF8C42"
         opacity="0.55"
       />
-      <line x1="12" y1="1" x2="12" y2="5" stroke="#4AA8C8" strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="10.8" y1="2.2" x2="12" y2="3.8" stroke="#4AA8C8" strokeWidth="0.8" strokeLinecap="round" />
-      <line x1="13.2" y1="2.2" x2="12" y2="3.8" stroke="#4AA8C8" strokeWidth="0.8" strokeLinecap="round" />
-      <line x1="5" y1="9" x2="8.5" y2="10.5" stroke="#4AA8C8" strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="5.5" y1="7.5" x2="7" y2="9.2" stroke="#4AA8C8" strokeWidth="0.8" strokeLinecap="round" />
-      <line x1="19" y1="9" x2="15.5" y2="10.5" stroke="#4AA8C8" strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="18.5" y1="7.5" x2="17" y2="9.2" stroke="#4AA8C8" strokeWidth="0.8" strokeLinecap="round" />
-      <line x1="6" y1="18" x2="9" y2="14.5" stroke="#4AA8C8" strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="18" y1="18" x2="15" y2="14.5" stroke="#4AA8C8" strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="12" y1="14.5" x2="12" y2="23" stroke="#4AA8C8" strokeWidth="1.3" strokeLinecap="round" />
-      <line x1="10.8" y1="21.5" x2="12" y2="20" stroke="#4AA8C8" strokeWidth="0.8" strokeLinecap="round" />
-      <line x1="13.2" y1="21.5" x2="12" y2="20" stroke="#4AA8C8" strokeWidth="0.8" strokeLinecap="round" />
+      <line
+        x1="12"
+        y1="1"
+        x2="12"
+        y2="5"
+        stroke="#4AA8C8"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="10.8"
+        y1="2.2"
+        x2="12"
+        y2="3.8"
+        stroke="#4AA8C8"
+        strokeWidth="0.8"
+        strokeLinecap="round"
+      />
+      <line
+        x1="13.2"
+        y1="2.2"
+        x2="12"
+        y2="3.8"
+        stroke="#4AA8C8"
+        strokeWidth="0.8"
+        strokeLinecap="round"
+      />
+      <line
+        x1="5"
+        y1="9"
+        x2="8.5"
+        y2="10.5"
+        stroke="#4AA8C8"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="5.5"
+        y1="7.5"
+        x2="7"
+        y2="9.2"
+        stroke="#4AA8C8"
+        strokeWidth="0.8"
+        strokeLinecap="round"
+      />
+      <line
+        x1="19"
+        y1="9"
+        x2="15.5"
+        y2="10.5"
+        stroke="#4AA8C8"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="18.5"
+        y1="7.5"
+        x2="17"
+        y2="9.2"
+        stroke="#4AA8C8"
+        strokeWidth="0.8"
+        strokeLinecap="round"
+      />
+      <line
+        x1="6"
+        y1="18"
+        x2="9"
+        y2="14.5"
+        stroke="#4AA8C8"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="18"
+        y1="18"
+        x2="15"
+        y2="14.5"
+        stroke="#4AA8C8"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="12"
+        y1="14.5"
+        x2="12"
+        y2="23"
+        stroke="#4AA8C8"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="10.8"
+        y1="21.5"
+        x2="12"
+        y2="20"
+        stroke="#4AA8C8"
+        strokeWidth="0.8"
+        strokeLinecap="round"
+      />
+      <line
+        x1="13.2"
+        y1="21.5"
+        x2="12"
+        y2="20"
+        stroke="#4AA8C8"
+        strokeWidth="0.8"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
