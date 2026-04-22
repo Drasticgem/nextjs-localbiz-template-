@@ -22,13 +22,18 @@ This file identifies where placeholders currently live in the template.
 - `lib/data/divisions.ts` — example divisions and card copy
 - `lib/data/credentials.ts` — example credential highlights
 - `lib/data/stats.ts` — sample stat counters
+- `lib/schemas/contact.ts` — `contactServices` list feeds the Service dropdown on both forms
+
+## Theme & Assets
+
+- `app/globals.css` — Tailwind v4 `@theme` tokens (colors, fonts, radius, shadows)
+- `public/` — logos, images, icons, videos
 
 ## UI Copy Touchpoints
 
 - `app/layout.tsx` metadata description
 - `app/(marketing)/page.tsx` homepage hero and services intro copy
 - `components/layout/Footer.tsx` template notice copy
-- `components/forms/EstimateForm.tsx` success/error helper text
 - `components/sections/*` section headlines and supporting text
 
 ## Replacement Notes

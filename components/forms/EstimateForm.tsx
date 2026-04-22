@@ -1,43 +1,51 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
+import { submitContactForm } from "@/app/actions/contact";
 import { BUSINESS } from "@/lib/constants";
+import { contactServices, type ContactInput } from "@/lib/schemas/contact";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-const SERVICES = [
-  "Electrical",
-  "A/C & Heating",
-  "Telecom",
-  "Custom Woodworking",
-  "Not sure yet",
-] as const;
-
 /**
- * Lightweight on-brand estimate form for the closing CTA.
- * Offwhite card on the gold CTA band; navy typography; gold submit.
- *
- * Submission is stubbed until a server action + Resend are wired up —
- * the UX (loading state, success screen, error fallback to phone) is
- * production-shaped so swapping in a real handler is a one-line change.
+ * On-brand estimate form embedded in the home CTA band.
+ * Submits through the same server action as the full contact page
+ * (app/actions/contact.ts → Resend).
  */
 export function EstimateForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const nameId = useId();
   const phoneId = useId();
   const emailId = useId();
   const serviceId = useId();
   const messageId = useId();
+  const honeypotId = useId();
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (status === "submitting") return;
     setStatus("submitting");
+    setErrorMessage(null);
 
-    try {
-      await new Promise((r) => setTimeout(r, 650));
+    const formData = new FormData(e.currentTarget);
+    const input: ContactInput = {
+      name: String(formData.get("name") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      service: String(formData.get("service") ?? ""),
+      preferredContactMethod: "",
+      message: String(formData.get("message") ?? ""),
+      companyWebsite: String(formData.get("companyWebsite") ?? ""),
+      sourcePage: "/",
+    };
+
+    const result = await submitContactForm(input);
+
+    if (result.ok) {
       setStatus("success");
-    } catch {
+    } else {
+      setErrorMessage(result.message);
       setStatus("error");
     }
   }
@@ -72,8 +80,8 @@ export function EstimateForm() {
           Request received
         </h3>
         <p className="text-[14px] leading-[1.6] text-navy/65">
-          Thanks — a our team member will reach out within one business day.
-          Need it sooner? Call{" "}
+          Thanks — a team member will reach out within one business day. Need
+          it sooner? Call{" "}
           <a
             href={BUSINESS.phoneHref}
             className="font-semibold text-navy underline decoration-gold/70 underline-offset-4 hover:decoration-gold"
@@ -158,7 +166,7 @@ export function EstimateForm() {
             <option value="" disabled>
               Select a service…
             </option>
-            {SERVICES.map((s) => (
+            {contactServices.map((s) => (
               <option key={s} value={s}>
                 {s}
               </option>
@@ -177,10 +185,22 @@ export function EstimateForm() {
             id={messageId}
             name="message"
             rows={3}
+            required
             placeholder="Briefly describe the job, timeline, or address…"
             className="block w-full resize-y rounded-lg border border-navy/15 bg-white px-4 py-[11px] text-[14px] text-navy placeholder:text-navy/35 transition-[border-color,box-shadow] duration-150 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/35"
           />
         </div>
+      </div>
+
+      <div className="sr-only" aria-hidden="true">
+        <label htmlFor={honeypotId}>Company Website</label>
+        <input
+          id={honeypotId}
+          name="companyWebsite"
+          tabIndex={-1}
+          autoComplete="off"
+          defaultValue=""
+        />
       </div>
 
       <button
@@ -200,11 +220,8 @@ export function EstimateForm() {
       </button>
 
       {status === "error" && (
-        <p
-          role="alert"
-          className="mt-3 text-[13px] text-navy/70"
-        >
-          Something went wrong. Please call us at{" "}
+        <p role="alert" className="mt-3 text-[13px] text-navy/70">
+          {errorMessage ?? "Something went wrong."} You can also call us at{" "}
           <a
             href={BUSINESS.phoneHref}
             className="font-semibold text-navy underline decoration-gold/70 underline-offset-4 hover:decoration-gold"

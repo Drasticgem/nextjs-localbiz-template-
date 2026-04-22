@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <p className="font-[family-name:var(--font-display)] text-2xl">{BUSINESS.name}</p>
           <p className="mt-2 text-sm text-white/70">
-            Reusable contractor website template. Replace all placeholder content before launch.
+            Reusable local-business website starter. Replace all placeholder content before launch.
           </p>
         </div>
         <div>
