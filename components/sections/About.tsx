@@ -43,7 +43,7 @@ export function About() {
 
             <p className="mb-6 text-[14px] leading-[1.8] text-white/60">
               Founded by {BUSINESS.founder} in {BUSINESS.founded}, we&apos;ve
-              built a strong reputation for quality workmanship, transparent communication, and on-time delivery. Update this section with your client's story, service area, and differentiators.
+              built a strong reputation for quality workmanship, transparent communication, and on-time delivery. Update this section with your client&apos;s story, service area, and differentiators.
             </p>
             <a
               href="#"
