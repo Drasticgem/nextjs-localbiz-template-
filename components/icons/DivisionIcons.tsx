@@ -1,7 +1,6 @@
 /**
- * Division icons — lifted verbatim from the legacy index.html so the
- * visual design is pixel-identical. These are plain SVG components;
- * pass size + strokeColor / fillColor as needed.
+ * Division icons used by the demo site's division cards.
+ * Plain SVG components; pass size + strokeColor / fillColor as needed.
  */
 
 type IconProps = {
