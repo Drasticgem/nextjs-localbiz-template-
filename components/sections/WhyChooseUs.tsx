@@ -28,31 +28,48 @@ export function WhyChooseUs() {
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/20 max-[768px]:bg-[linear-gradient(to_bottom,rgba(15,32,64,0.92)_0%,rgba(15,32,64,0.65)_28%,rgba(15,32,64,0.55)_55%,rgba(15,32,64,0.8)_100%)]"
         />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent"
+        />
 
         <div className="relative z-[1] flex min-h-[inherit] items-center">
           <div className="container-1140 grid w-full grid-cols-2 items-center gap-16 py-20 max-[1024px]:gap-12 max-[768px]:grid-cols-1 max-[768px]:gap-12 max-[768px]:py-24 max-[480px]:py-20">
             <Reveal>
               <div className="max-w-[560px]">
-                <p className="mb-3 text-[10px] font-semibold uppercase text-gold" style={{ letterSpacing: "0.22em" }}>
+                <p
+                  className="mb-3 text-[10px] font-semibold uppercase text-gold"
+                  style={{ letterSpacing: "0.22em" }}
+                >
                   Why Choose Us
                 </p>
                 <h2
                   className="mb-5 font-[family-name:var(--font-display)] font-black text-white"
-                  style={{ fontSize: "clamp(28px, 3.6vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
+                  style={{
+                    fontSize: "clamp(28px, 3.6vw, 44px)",
+                    lineHeight: 1.1,
+                    letterSpacing: "-0.015em",
+                  }}
                 >
                   Built for trust, speed, and reliable service.
                 </h2>
                 <p className="text-[15px] leading-[1.75] text-white/75 max-[480px]:text-[14px]">
-                  Use this section to explain your local reputation, safety standards, and quality guarantees. Keep this copy short,
-                  specific, and outcome-focused so visitors understand why they should contact you now.
+                  Use this section to explain your local reputation, safety standards, and
+                  quality guarantees. Keep this copy short, specific, and outcome-focused
+                  so visitors understand why they should contact you now.
                 </p>
               </div>
             </Reveal>
 
             <Reveal stagger className="flex flex-col gap-3 max-[768px]:gap-3">
               {CREDENTIALS.map((c) => (
-                <WhyBadge key={c.shortLabel} value={c.value} smallValue={c.smallValue} title={c.title} sub={c.sub} />
+                <WhyBadge
+                  key={c.shortLabel}
+                  value={c.value}
+                  smallValue={c.smallValue}
+                  title={c.title}
+                  sub={c.sub}
+                />
               ))}
             </Reveal>
           </div>

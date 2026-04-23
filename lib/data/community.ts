@@ -20,7 +20,6 @@ export const COMMUNITY: CommunityCard[] = [
   {
     number: "100+",
     title: "Years in Business",
-    description:
-      "Placeholder: summarize long-term local impact and community trust.",
+    description: "Placeholder: summarize long-term local impact and community trust.",
   },
 ];

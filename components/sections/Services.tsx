@@ -177,16 +177,11 @@ function ServicePanel({
                 style={{
                   letterSpacing: "0.03em",
                   color: accentHex,
-                  transitionTimingFunction:
-                    "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                  transitionTimingFunction: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
                 }}
               >
                 {division.exploreLabel}
-                <ArrowRight
-                  className="h-4 w-4"
-                  strokeWidth={2}
-                  aria-hidden="true"
-                />
+                <ArrowRight className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
               </a>
             </div>
           </Reveal>

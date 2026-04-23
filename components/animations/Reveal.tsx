@@ -65,15 +65,15 @@ export function Reveal({
         viewport={{ once: true, amount: 0.08, margin: "0px 0px -40px 0px" }}
       >
         {/* Wrap each direct child so the stagger variants cascade. */}
-        {Array.isArray(children)
-          ? children.map((c, i) => (
-              <motion.div key={i} variants={child}>
-                {c}
-              </motion.div>
-            ))
-          : (
-              <motion.div variants={child}>{children}</motion.div>
-            )}
+        {Array.isArray(children) ? (
+          children.map((c, i) => (
+            <motion.div key={i} variants={child}>
+              {c}
+            </motion.div>
+          ))
+        ) : (
+          <motion.div variants={child}>{children}</motion.div>
+        )}
       </MotionTag>
     );
   }

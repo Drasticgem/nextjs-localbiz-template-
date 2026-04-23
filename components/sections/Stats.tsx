@@ -8,10 +8,7 @@ import { STATS } from "@/lib/data/stats";
  */
 export function Stats() {
   return (
-    <section
-      aria-label="Company statistics"
-      className="bg-navy"
-    >
+    <section aria-label="Company statistics" className="bg-navy">
       <div className="container-1140">
         <div
           className={[

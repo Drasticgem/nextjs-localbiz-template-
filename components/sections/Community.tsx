@@ -29,7 +29,8 @@ export function Community() {
             of this community.
           </h2>
           <p className="mb-8 max-w-[560px] text-[15px] leading-[1.75] text-muted">
-            Use this section to highlight local involvement, sponsorships, and charitable work that build trust in your service area.
+            Use this section to highlight local involvement, sponsorships, and charitable
+            work that build trust in your service area.
           </p>
         </Reveal>
 
@@ -48,9 +49,7 @@ export function Community() {
               <div className="mb-[6px] text-[14px] font-semibold text-navy">
                 {card.title}
               </div>
-              <p className="text-[12px] leading-[1.65] text-muted">
-                {card.description}
-              </p>
+              <p className="text-[12px] leading-[1.65] text-muted">{card.description}</p>
             </div>
           ))}
         </Reveal>

@@ -113,7 +113,8 @@ export function Hero() {
           className="mb-8 max-w-[520px] text-[15px] leading-[1.8] text-white max-[480px]:text-[13px]"
           style={{ textShadow: "0 1px 8px rgba(0,0,0,0.55)" }}
         >
-          Electrical, HVAC, telecom, and specialty trades for residential and commercial projects. Replace this line with client-specific positioning.
+          Electrical, HVAC, telecom, and specialty trades for residential and commercial
+          projects. Replace this line with client-specific positioning.
         </p>
 
         {/* Dual CTAs — solid gold primary + gold-outline tel: secondary */}

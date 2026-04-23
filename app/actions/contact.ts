@@ -8,7 +8,9 @@ export type ContactActionResult =
   | { ok: true; message: string }
   | { ok: false; message: string; fieldErrors?: Record<string, string[]> };
 
-export async function submitContactForm(input: ContactInput): Promise<ContactActionResult> {
+export async function submitContactForm(
+  input: ContactInput,
+): Promise<ContactActionResult> {
   const parsed = contactSchema.safeParse(input);
 
   if (!parsed.success) {
