@@ -6,14 +6,15 @@ export const BUSINESS = {
   // Core placeholders for template customization
   name: "COMPANY_NAME",
   shortName: "COMPANY_SHORT_NAME",
+  tagline: "COMPANY_TAGLINE",
   founder: "FOUNDER_NAME",
   founded: 2000,
   phone: "+15551234567",
   phoneDisplay: "(555) 010-1234",
   phoneHref: "tel:+15551234567",
-  email: "hello@examplecontractor.com",
+  email: "hello@example.com",
   paymentUrl: "#",
-  bookingUrl: "https://cal.com/example-contractor",
+  bookingUrl: "https://cal.com/example",
   primaryColor: "oklch(62% 0.18 258)",
   address: {
     street: "123 Main St",

@@ -80,8 +80,8 @@ export function EstimateForm() {
           Request received
         </h3>
         <p className="text-[14px] leading-[1.6] text-navy/65">
-          Thanks — a team member will reach out within one business day. Need
-          it sooner? Call{" "}
+          Thanks — a team member will reach out within one business day. Need it sooner?
+          Call{" "}
           <a
             href={BUSINESS.phoneHref}
             className="font-semibold text-navy underline decoration-gold/70 underline-offset-4 hover:decoration-gold"

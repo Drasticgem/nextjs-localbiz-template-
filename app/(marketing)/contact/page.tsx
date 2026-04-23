@@ -4,7 +4,9 @@ import { BUSINESS } from "@/lib/constants";
 export default function ContactPage() {
   return (
     <section className="mx-auto max-w-4xl px-6 py-16 md:px-10">
-      <h1 className="font-[family-name:var(--font-display)] text-4xl text-navy">Contact</h1>
+      <h1 className="font-[family-name:var(--font-display)] text-4xl text-navy">
+        Contact
+      </h1>
       <p className="mt-4 text-body-text/85">
         Tell us what you need and our team will follow up as soon as possible.
       </p>

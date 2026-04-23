@@ -29,8 +29,8 @@ export function CTA() {
               Ready when you are.
             </h2>
             <p className="mb-6 max-w-[440px] text-[15px] leading-[1.65] text-navy/70 max-[768px]:mx-auto">
-              Tell us about the job or give us a call. We&apos;ll get back to
-              you within one business day with a free estimate.
+              Tell us about the job or give us a call. We&apos;ll get back to you within
+              one business day with a free estimate.
             </p>
             <a
               href={BUSINESS.phoneHref}

@@ -7,7 +7,8 @@ export interface FaqItem {
 export const faqs: FaqItem[] = [
   {
     question: "Do you offer free estimates?",
-    answer: "Yes. Update this answer with your exact estimate policy and turnaround time.",
+    answer:
+      "Yes. Update this answer with your exact estimate policy and turnaround time.",
   },
   {
     question: "What areas do you serve?",

@@ -17,7 +17,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/90 px-6 py-4 backdrop-blur md:px-10">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between" aria-label="Primary">
+      <nav
+        className="mx-auto flex max-w-6xl items-center justify-between"
+        aria-label="Primary"
+      >
         <Link href="/" className="text-lg font-semibold text-white">
           {BUSINESS.shortName}
         </Link>

@@ -1,9 +1,10 @@
+import { BUSINESS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 /**
- * Template Contractor Group bolt logo + wordmark.
- * Reused by Header (size="md") and Footer (size="sm").
- * The bolt SVG path is lifted verbatim from the legacy index.html.
+ * Two-line wordmark + bolt mark.
+ * Top line renders BUSINESS.shortName, bottom line renders BUSINESS.tagline.
+ * Swap the SVG path or colors during client customization.
  */
 type LogoProps = {
   size?: "sm" | "md";
@@ -32,19 +33,17 @@ export function Logo({ size = "md", className }: LogoProps) {
         <span
           className={cn(
             "font-[family-name:var(--font-display)] font-bold text-white",
-            size === "md"
-              ? "text-[16px] max-[480px]:text-[14px]"
-              : "text-[15px]",
+            size === "md" ? "text-[16px] max-[480px]:text-[14px]" : "text-[15px]",
           )}
           style={{ letterSpacing: "0.1em" }}
         >
-          SCOTT
+          {BUSINESS.shortName}
         </span>
         <span
           className="mt-[3px] font-[family-name:var(--font-body)] text-[8px] font-semibold text-gold"
           style={{ letterSpacing: "0.25em" }}
         >
-          ELECTRIC GROUP
+          {BUSINESS.tagline}
         </span>
       </span>
     </span>
